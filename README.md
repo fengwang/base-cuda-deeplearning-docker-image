@@ -5,9 +5,9 @@ It is based on the official NVIDIA PyTorch image and includes TensorFlow, Jax, a
 
 ## Features
 - CUDA 12.8 based on Ubuntu 24.04
-- PyTorch 2.1.0
-- TensorFlow 2.15.0
-- Jax 0.4.10
+- PyTorch 2.7.0
+- TensorFlow 2.19.0
+- Jax 0.6.0
 
 ## Install
 
@@ -26,7 +26,7 @@ docker build -t cuda-deeplearning-base:latest . --progress=plain --no-cache
 docker run --gpus all -it --rm \
     -v /path/to/your/data:/data \
     -v /path/to/your/code:/code \
-    -p 8888:8888 \
+    -p 8888:8888 \ # if you want to invoke jupyter notebook/lab
     cuda-deeplearning-base:latest bash
 ```
 
