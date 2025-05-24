@@ -44,6 +44,10 @@ Then build your own image:
 docker build -t your-image-name:latest .
 ```
 
+### Jupyter Notebook example
+
+Check [here](./examples/jupyter-notebook/readme.md) for a complete example of how to run Jupyter Notebook in the container.
+
 
 ## Pre-Installed Libraries
 - [System Libraries](./system_packages.txt)

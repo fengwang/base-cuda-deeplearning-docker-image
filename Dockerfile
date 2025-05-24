@@ -55,4 +55,12 @@ RUN pip3 install -U dm-haiku rlax optax chex jraph flax objax trax jax-md
 # for MLOPs
 RUN pip3 install -U wandb mlflow minio
 
+# for git repos
+RUN apt install -y --no-install-recommends \
+    git \
+    git-lfs
+
+# for objection detection, segmentation ...
+RUN pip install -U git+https://github.com/facebookresearch/detectron2.git
+
 

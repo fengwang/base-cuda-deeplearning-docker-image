@@ -1,0 +1,21 @@
+name: cuda-deeplearning-jupyter-notebook-project
+services:
+    cuda-deeplearning-jupyter-notebook:
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities:
+                              - gpu
+        ports:
+            - 8888:8888
+        volumes:
+            - $(pwd)/data/workspace:/workspace
+            - $(pwd)/data/config:/root
+            - $(pwd)/data/logs:/logs
+        container_name: cuda-deeplearning-jupyter-notebook
+        restart: always
+        image: cuda-deeplearning-jupyter-notebook
+
